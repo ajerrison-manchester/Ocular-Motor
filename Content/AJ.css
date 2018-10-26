@@ -1,0 +1,387 @@
+﻿body 
+{
+	background-color: #000080;
+	background-image: linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	background-image: -o-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+background-image: -moz-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+background-image: -webkit-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+background-image: -ms-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	color:Black;
+}
+
+.header_container
+{
+	background-color:White;
+	color:Black;
+	border: solid 1px Black;
+	padding: 5px 5px 5px 10px;
+	border-radius: 10px;
+	margin-right:15px;
+}
+
+.content_container
+{
+	background-color:#f0f8ff;
+	color:Black;
+	border: solid 1px Black;
+	padding: 5px 5px 5px 10px;
+	border-radius: 10px;
+	margin-right:15px;
+	overflow:hidden;
+}
+
+.footer_container
+{
+	background-color:White;
+	color:Black;
+	border: solid 1px Black;
+	padding: 5px 5px 5px 10px;
+	border-radius: 5px;
+	margin-right: 15px;
+}
+.menu_container
+{
+	background-color:White;
+	color:Black;
+	border: solid 1px Black;
+	padding: 5px 5px 5px 10px;
+	border-radius: 5px;
+	margin-right: 15px;
+}
+
+.html_error_container
+{
+	background-color:White;
+	color:Red;
+	border: solid 3px Black;
+	padding: 5px 5px 5px 10px;
+	border-radius: 5px;
+	margin-right: 15px;
+	font-size:x-small;
+}
+
+.name_title
+{
+	font-size:x-large;
+	font-weight:bold;
+}
+
+.role_title
+{
+	font-size:medium;
+	font-weight:bold;
+}
+
+.footer_link_image
+{
+	border: solid 1px Black;
+	border-radius: 5px;
+	margin: 0px 3px 0px 3px;
+}
+
+.footer_link
+{
+	display:inline-block;
+}
+
+.tooltip{
+    position:absolute;
+    z-index:999;
+    /*left:-9999px;*/
+    display:none;
+    background-color:#fffacd;
+    padding:5px;
+    border:1px solid Black;
+    border-radius:5px;
+    width:250px;
+}
+
+.tooltip p{
+    margin:0;
+    padding:0;
+    color:Black;
+    background-color:#eee8aa;
+    padding:2px 7px;
+    font-size:smaller;
+}
+
+.helpword
+{
+	color:#2e8b87;
+	cursor:help;
+}
+
+#MBCS_logo
+{
+	cursor:help;
+}
+
+#my_name
+{
+	cursor:pointer;
+	
+}
+
+.header_image
+{
+	position:relative;
+	float:right;
+}
+
+.menu_item
+{
+	font-size:medium;
+	text-align:center;
+	border: solid 1px Black;
+	border-radius: 5px;
+	width:100%;
+	overflow:hidden;
+
+}
+
+a.menu_link
+{
+	text-decoration:none;
+	background-color: #000080;
+	color: #e0eee0;
+	display:block;
+	font-weight:bold;
+	border-radius: 5px;
+}
+
+a:visited.menu_link
+{
+	text-decoration:none;
+	background-color: #000080;
+	color: #e0eee0;
+	display:block;
+	font-weight:bold;
+	border-radius: 5px;
+}
+
+a:hover.menu_link
+{
+	text-decoration:none;
+	background-color: #2e8b87;
+	color:#e0eee0;
+	font-weight:bold;
+	display:block;
+	border-radius: 5px;
+}
+
+.menu_link_active
+{
+	text-decoration:none;
+	background-color: #e0eee0;
+	color:#000080;
+	font-weight:bold;
+	display:block;
+	border-radius: 5px;
+}
+
+a:hover.menu_link_active
+{
+	text-decoration:none;
+	background-color: #2e8b87;
+	color:#e0eee0;
+	font-weight:bold;
+	display:block;
+	border-radius: 5px;
+}
+
+.content_text
+{
+	font-size:medium;
+	color:Black;
+}
+
+.content_title
+{
+	font-size:x-large;
+	color:Black;
+	font-weight:bold;
+	font-family:Calibri;
+}
+
+
+#oc_choice
+{
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	font-family:Calibri;
+	font-size:small;
+}
+
+.oc_button
+{
+	
+	font-size:larger;
+	border-radius:5px;
+	background-color: #000080;
+	color: #e0eee0;
+	display:block;
+	padding:3px 3px 3px 3px;
+	min-height:40px;
+	text-align:center;
+}
+
+.oc_button2
+{
+	
+	font-size:larger;
+	overflow-wrap:break-word;
+	background-color: #000080;
+    border-radius:5px;
+	color: #e0eee0;
+	height:45px;
+	text-align:center;
+}
+
+.oc_button_selected
+{
+	
+	font-size:larger;
+	border-radius:5px;
+	background-color: #e0eee0;
+	color: #000080;
+	display:block;
+	padding:3px 3px 3px 3px;
+	min-height:40px;
+	text-align:center;
+}
+
+#mov_choice
+{
+	font-size:small;
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	font-family:Calibri;
+	
+}
+
+#cov_choice
+{
+	font-size:small;
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	font-family:Calibri;
+}
+
+#step_choice
+{
+	font-size:small;
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	font-family:Calibri;
+}
+
+#pho_choice
+{
+	font-size:small;
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	font-family:Calibri;
+}
+
+.cover_toggle
+{
+	font-size:small;
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	font-family:Calibri;
+}
+
+.cover_toggle > input
+{
+	font-family:Calibri;
+	font-size: small;
+	width:150px;
+}
+
+.test_select
+{
+	
+	border:solid 1px Black;
+	border-radius:5px;
+	font-family:Calibri;
+}
+
+.credit_box
+{
+	
+	border:solid 1px Green;
+	border-radius:5px;
+	font-size:small;
+	font-family:Calibri;
+	color:#000080;
+	background-color:#e0eee0;
+	text-align:left;
+	padding: 3px 3px 3px 3px;
+}
+
+.mov_detail
+{
+	font-family:Calibri;
+	text-align:left;
+}
+
+.pho_detail
+{
+	font-family:Calibri;
+	
+	text-align:left;
+	
+}
+
+.cov_detail
+{
+	font-family:Calibri;
+	text-align:left;
+}
+
+.special_text
+{
+	font-family:Calibri;
+	text-align:left;
+	font-size:small;
+	font-weight:bold;
+	padding:10px 0 10px 0;
+}
+
+.threestep_detail
+{
+	font-family:Calibri;
+	text-align:left;
+}
+
+.portfolio_item
+{
+	text-align:center;
+	border-radius: 5px;
+	font-size: smaller;
+	color: White;
+	overflow:hidden;
+	background-color: #000080;
+	background-image: linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	background-image: -o-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	background-image: -moz-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	background-image: -webkit-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	background-image: -ms-linear-gradient(right, rgb(138,142,184) 25%, rgb(55,119,158) 63%, rgb(59,47,163) 89%);
+	padding: 3px 3px 3px 3px;
+	height: 170px;
+}
+
+.portfolio_title
+{
+	font-weight:bold;
+	font-size: larger;
+}
+
+a.portfolio_link 
+{
+	text-decoration:none;
+	display:block;
+	border-radius: 5px;
+
+}
+

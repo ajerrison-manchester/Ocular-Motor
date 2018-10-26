@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ocular Motor Disorders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./Content/AJ.css" />
+    <link href="./Content/bootstrap.css" rel="stylesheet" />
+
+    <!--
+    <script src="./Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./Scripts/bootstrap.min.js"></script>
+    <script src="./Scripts/ocularmotility.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+
+
+    <div id="content" class="container">
+        <div class="content_container " style="text-align:center">
+
+            <p>
+                <h1 class="content_title">Ocular Motor Disorders</h1>
+                <a class="btn btn-sm btn-primary" href="javascript:location.reload();" role="button">Reset</a>
+            </p>
+
+
+            <div class="row ">
+                <div id="oc_choice">
+
+                    <div class="col-md-3 oc_button2" id="oc_cover">
+                        The Cover Test (heterotropia)
+                    </div>
+
+
+                    <div class="col-md-3 oc_button2" id="oc_phoria">
+                        The Cover Test (heterophoria)
+                    </div>
+
+                    <div class="col-md-3  oc_button2" id="oc_movement">
+                        Ocular Motility Disorders
+                    </div>
+
+
+                    <div class="col-md-3  oc_button2" id="oc_3step">
+                        Three step technique for diagnosing a fourth nerve palsy
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 special_text" id="3step_special" style="display:none">
+                    In this example, a left hypertropia greater in right gaze, and greater in left head tilt, fits the Three Step Test criteria for a left superior oblique palsy (or a left Fourth Cranial Nerve Palsy).
+                </div>
+                <div class="col-md-12 special_text" id="spacer_special">
+                    &nbsp;
+                </div>
+
+                <div class="col-md-12 alert-danger" id="orientation_special" style="display:none">
+                    On smaller screens this app will look better in landscape (please rotate the screen).
+                </div>
+
+               
+            </div>
+
+            <div class="row">
+                <div id="spacer_select" class="col-md-4" style="display:none">
+                    &nbsp;
+
+                </div>
+                <div id="movement_select" class="test_select col-md-4" style="display:none">
+                    <div id="mov_choice">
+                        <input type="radio" id="mov_third" name="movtype" value="third" checked="true" />Complete Right Third Nerve Palsy <br />
+                        <input type="radio" id="mov_sixth" name="movtype" value="sixth" />Left Sixth Nerve Palsy<br />
+                        <input type="radio" id="mov_fourth" name="movtype" value="sixth" />Right Fourth Nerve Palsy<br />
+                        <input type="radio" id="mov_orbital" name="movtype" value="orbital" />Left Orbital Floor Blow-out With Inferior Rectus Entrapment <br />
+                    </div>
+                </div>
+
+                <div id="cover_select" class="test_select col-md-4" style="display:none">
+                    <div id="cov_choice">
+                        <input type="radio" id="cov_pref" name="covtype" value="pref" />Right Esotropia <br />
+                        <input type="radio" id="cov_eso" name="covtype" value="eso" checked="true" />Alternating Esotropia <br />
+                        <input type="radio" id="cov_exo_left" name="covtype" value="left" />Left Exotropia <br />
+                        <input type="radio" id="cov_exo" name="covtype" value="exo" />Alternating Exotropia<br />
+
+                        <input type="radio" id="cov_hyper" name="covtype" value="hyper" />Left Hypertropia<br />
+                    </div>
+                    <div class="cover_toggle">
+                        Change to: <input value="Translucent cover" class="btn btn-primary btnCover" type="button" title="Toggle" />
+                    </div>
+                </div>
+
+                <div id="3step_select" class="test_select col-md-4" style="display:none">
+                    <div id="step_choice">
+                        <input type="radio" id="3step_one" name="3steptype" value="one" checked="true" />Step 1: Hypertropia in primary gaze <br />
+                        <input type="radio" id="3step_twoA" name="3steptype" value="twoA" />Step 2a: Hypertropia in right gaze<br />
+                        <input type="radio" id="3step_twoB" name="3steptype" value="twoB" />Step 2b: Hypertropia in left gaze<br />
+                        <input type="radio" id="3step_threeA" name="3steptype" value="threeA" />Step 3a: Hypertropia in right head tilt<br />
+                        <input type="radio" id="3step_threeB" name="3steptype" value="threeB" />Step 3b: Hypertropia in left head tilt<br />
+                    </div>
+                    <div class="cover_toggle">
+                        Change to: <input value="Translucent cover" class="btn btn-primary btnCover" type="button" title="Toggle" />
+                    </div>
+                </div>
+
+                <div id="phoria_select" class="test_select col-md-4" style="display:none">
+                    <div id="pho_choice">
+                        <input type="radio" id="pho_exo" name="photype" value="exo" checked="true" />Exophoria <br />
+                        <input type="radio" id="pho_eso" name="photype" value="eso" checked="true" />Esophoria <br />
+                        <input type="radio" id="pho_vert" name="photype" value="vert" />Dissociated Vertical Deviation<br />
+                        <input type="radio" id="pho_hyper" name="photype" value="hyper" />Hyperphoria<br />
+                    </div>
+                    <div class="cover_toggle">
+                        Change to: <input value="Translucent cover" class="btn btn-primary btnCover" type="button" title="Toggle" />
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-6">
+                    <canvas id="eyeCanvas" width="500" height="150" style="border:1px solid #c3c3c3; cursor:pointer">
+                        This animation requires a browser that supports HTML5.<br />
+                        In particular you need a browser that supports the HTML5 'canvas' page element. <br />
+                        Find a suitable browser at: <a href="http://caniuse.com/">When Can I Use</a>
+                    </canvas>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4  ">
+                    &nbsp;
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="spacer_detail" class="mov_detail" style="display:none">
+                        <p>
+                            Currently showing normal eye movement. Use the mouse to move the eyes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="mov_third_detail" class="mov_detail" style="display:none">
+                        <p>
+                            <b>Complete right third nerve palsy </b><br />
+                            In this example the right eye is divergent and slightly depressed
+                            (“down and out”). There is full movement on dextro version, but the right
+                            eye is limited on laevo version. The right eye is also limited on all
+                            elevated and depressed positions. Note that the right pupil is dilated
+                            and the patient would also present with a ptosis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="mov_sixth_detail" class="mov_detail" style="display:none">
+                        <p>
+                            <b>Left sixth nerve palsy</b><br />
+                            In this example the left eye cannot abduct beyond the midline in the
+                            direction of the affected lateral rectus muscle. There is also a left
+                            esotropia in primary position.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="mov_fourth_detail" class="mov_detail" style="display:none">
+                        <p>
+                            <b>Right fourth nerve palsy</b><br />
+                            The right eye shows an under-action on laevo depression in the direction of
+                            the affected superior oblique muscle. There is also a right hypertopia
+                            in primary position.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8   ">
+                    <div id="mov_orbital_detail" class="mov_detail" style="display:none">
+                        <p>
+                            <b>Left orbital floor blow out with inferior rectus entrapment</b><br />
+                            In some cases of orbital floor fracture, the inferior rectus and associated
+                            orbital tissue can get trapped in the fracture. This has the effect of
+                            restricting ocular movement in the opposite direction due to mechanical
+                            tethering. In this example, you can see that the left eye does not move
+                            above the midline.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8   ">
+                    <div id="pho_exo_detail" class="pho_detail" style="display:none">
+                        <p>
+                            <b>Exophoria</b><br />
+                            Here the eyes are initially aligned. When you perform the cover-uncover test there
+                            is no movement of the uncovered eye. However, you will see the previously covered
+                            eye make an inward movement. Use the translucent cover option to see how the eye
+                            is moving under the cover.  When you perform the alternating cover test you will
+                            see both eyes make an inward movement once uncovered.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8   ">
+                    <div id="pho_eso_detail" class="pho_detail" style="display:none">
+                        <p>
+                            <b>Esophoria</b><br />
+                            Here the eyes are initially aligned. When you perform the cover-uncover test there
+                            is no movement of the uncovered eye. However, you will see the previously covered
+                            eye make an outward movement. Use the translucent cover option to see how the eye
+                            is moving under the cover.  When you perform the alternating cover test you will
+                            see both eyes make an outward movement once uncovered.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="pho_vert_detail" class="pho_detail" style="display:none">
+                        <p>
+                            <b>Dissociated Vertical Deviation</b><br />
+                            This is a condition that can sometimes be seen in patients with Infantile
+                            esotropia or exotropia or where there is poor vision. One eye tends to drift
+                            upwards upon occlusion, although it can also occur without dissociation. It
+                            is commonly bilateral.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="pho_hyper_detail" class="pho_detail" style="display:none">
+                        <p>
+                            <b>Hyperphoria</b><br />
+                            Here the eyes are initially aligned. When you perform the cover-uncover test
+                            there is no movement of the uncovered eye. However, when you uncover the right
+                            eye you will see this eye move downwards. When you uncover the left eye you will
+                            see this eye move upwards.  Use the translucent cover option to see how the eye
+                            is moving under the cover. When recording vertical phoria's we usually refer
+                            to the higher eye, so this example would be termed a right hyperphoria or R/L.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="cov_eso_detail" class="cov_detail" style="display:none">
+                        <p>
+                            <b>Alternating Esotropia</b><br />
+                            Here, the left eye is initially turned inwards. When you cover the right eye,
+                            the left eye now takes up fixation. However, when you remove the cover, the
+                            right eye remains convergent as the patient is able to fixate equally well
+                            with either eye. This is called an alternating esotropia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="cov_exo_detail" class="cov_detail" style="display:none">
+                        <p>
+                            <b>Alternating Exotropia</b><br />
+                            Here, the right eye is initially turned outwards. When you cover the left eye,
+                            the right eye now takes up fixation. However, when you remove the cover, the right
+                            left remains divergent as the patient is able to fixate equally well with either eye.
+                            This is called an alternating exotropia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="cov_pref_detail" class="cov_detail" style="display:none">
+                        <p>
+                            <b>Right Esotropia</b><br />
+                            In this example the right eye is initially turned inwards. When you cover the
+                            left eye, the right eye takes up fixation. It then returns to its convergent
+                            position once uncovered.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="cov_exo_left_detail" class="cov_detail" style="display:none">
+                        <p>
+                            <b>Left Exotropia</b><br />
+                            The left eye is turned outwards. When you cover the right eye, the left eye
+                            takes up fixation. It then returns to the divergent position once uncovered.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="cov_hyper_detail" class="cov_detail" style="display:none">
+                        <p>
+                            <b>Left Hypertropia</b><br />
+                            The left eye is turned upwards. When you cover the right eye the left eye moves down to
+                            fixate. It then elevates again when you remove the cover.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="3step_one_detail" class="threestep_detail" style="display:none">
+                        <p>
+                            <b>Step 1: Hypertropia in primary gaze. </b><br />
+                            In order to diagnose whether the cause of a hypertropia is a fourth nerve palsy
+                            you can perform the three step technique. Firstly, establish which eye is hypertropic
+                            in the primary position. Here it is the left eye.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="3step_twoA_detail" class="threestep_detail" style="display:none">
+                        <p>
+                            <b>Step 2: Determine whether the hypertropia is greater in left or right gaze.  </b><br />
+                            Secondly examine how the size of the hypertropia changes on lateral gaze.
+                            A hypertropia caused by a fourth nerve palsy will increase in contralateral gaze.
+                            In the example here, the hypertropia is larger in dextro version and smaller in laevo
+                            version.
+                            Step 2a: Test the right gaze. The above shows increased hypertropia of the left eye.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="3step_twoB_detail" class="threestep_detail" style="display:none">
+                        <p>
+                            <b>Step 2: Determine whether the hypertropia is greater in left or right gaze.  </b><br />
+                            Secondly examine how the size of the hypertropia changes on lateral gaze.
+                            A hypertropia caused by a fourth nerve palsy will increase in contralateral gaze.
+                            In the example here, the hypertropia is larger in dextro version and smaller in laevo
+                            version.
+                            Step 2b: Test the left gaze. The above shows minimal hypertropia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8  ">
+                    <div id="3step_threeA_detail" class="threestep_detail" style="display:none">
+                        <p>
+                            <b>Step 3: Determine whether the hypertropia is greater in left or right head tilt.  </b><br />
+                        </p>
+                        <div style="position:relative; float:left; width:10%">
+                            <img src="./Images/head_tilt_right.png" alt="right head tilt" height="50px" width="50px" />
+                        </div>
+                        <div style="position:relative; float:right; width:90%">
+                            In the third step, compare the hypertropia with the patients head tilted to the left
+                            and right. A hypertropia due to a fourth nerve palsy should increase when tilted to
+                            the same shoulder.
+                            Step 3a: Right head tilt: there is a small hypertropia.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 ">
+                    <div id="3step_threeB_detail" class="threestep_detail" style="display:none">
+
+                        <p>
+                            <b>Step 3: Determine whether the hypertropia is greater in left or right head tilt.  </b><br />
+                        </p>
+                        <div style="position:relative; float:left; width:10%">
+                            <img src="./Images/head_tilt_left.png" alt="left head tilt" height="50px" width="50px" />
+                        </div>
+                        <div style="position:relative; float:right; width:90%">
+                            In the third step, compare the hypertropia with the patients head tilted to the left
+                            and right. A hypertropia due to a fourth nerve palsy should increase when tilted to
+                            the same shoulder.
+                            Step 3b: Left head tilt: there is a larger hypertropia.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div id="credits" class="credit_box col-md-12">
+                    <p>
+
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Ocular Motor Disorders</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://uk.linkedin.com/in/andrewjerrison" property="cc:attributionName" rel="cc:attributionURL">Andrew Jerrison</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
